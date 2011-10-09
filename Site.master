@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrapper">
+        <div id="Menu">
+		        <ul>
+                    <li><asp:LinkButton ID="LogonHprLnk" runat="server" Text="Logon" Visible="true" PostBackUrl="~/Logon.aspx"></asp:LinkButton></li>
+                    <li><asp:LinkButton ID="LogoutHprLnk" runat="server" Text="Logout" Visible="false" PostBackUrl="~/Default.aspx" OnClick="Logout_click"></asp:LinkButton></li>
+                    <li><a href="Registration.aspx" id="Registration">Register</a></li>
+		        </ul>		
+	    </div>
+	<div id="header">
+		<h1>CIS407A</h1>
+	</div>
+
+	<div id="menu">
+		<ul>
+			<li><a href="Default.aspx">Home</a></li>
+			<li><a href="Forums.aspx">Forums</a></li>
+			<li><a href="Calendar.aspx">Calendar</a></li>
+			<li><a href="Professions.aspx">Professions</a></li>
+			<li><a href="Roster.aspx">Roster</a></li>
+		</ul>		
+	</div>
+
+	<div id="content">
+		
+		<div class="entry">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div id="footer-valid">
+			<a href="http://validator.w3.org/check/referer">xhtml</a> / <a href="http://www.ginger-ninja.net/">ginger ninja!</a>
+		</div>
+	</div>
+
+</div>
+       
+    
+    </form>
+</body>
+</html>
