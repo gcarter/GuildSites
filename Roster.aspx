@@ -3,11 +3,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
+    
+    <br />
+    <center>
+        <asp:Label ID="lblTitle" runat="server" Font-Bold="true" Font-Size="X-Large">Roster</asp:Label>
+    </center>
+    <br />
+    <hr />
     
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" 
         DataKeyNames="charName" DataSourceID="SqlDataSource2" Width="681px" 
-        AllowPaging="True" AllowSorting="True">
+        AllowPaging="True" AllowSorting="True" PageSize="15">
         <Columns>
             <asp:BoundField DataField="charName" HeaderText="Name" ReadOnly="True" 
                 SortExpression="charName" />
@@ -27,18 +33,18 @@
         ConnectionString="<%$ ConnectionStrings:RosterDB %>" 
         SelectCommand="SELECT * FROM [Carter_Ga_RosterInformation]">
     </asp:SqlDataSource>
+
     <br />
 
-    
     <asp:Button ID="addBtn" runat="server" Text="Add" width="150" 
-    onclick="addBtn_Click"/>
+    onclick="addBtn_Click"/><asp:Label ID="L2" runat="server" Text="..." ForeColor="White"></asp:Label><asp:Label ID="lblAddInfo" runat="server">Add's new characters to the Roster</asp:Label>
     <br />
     <asp:Button ID="modifyBtn" runat="server" Text="Modify" width="150" 
-    onclick="modifyBtn_Click" />
+    onclick="modifyBtn_Click" /><asp:Label ID="L3" runat="server" Text="..." ForeColor="White"></asp:Label><asp:Label ID="lblModifyInfo" runat="server">Change/Modifies character information already on the Roster</asp:Label>
     <br />
     <asp:Button ID="deleteBtn" runat="server" Text="Delete" width="150" 
-    onclick="deleteBtn_Click" />
+    onclick="deleteBtn_Click" /><asp:Label ID="L4" runat="server" Text="..." ForeColor="White"></asp:Label><asp:Label ID="lblDeleteInfo" runat="server">Delete's characters from the Roster</asp:Label>
     <br />
-    Working as intended.
+   
 </asp:Content>
 

@@ -6,40 +6,59 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
 
+    <br />
+    <center>
+        <asp:Label ID="lblTitle" runat="server" Font-Size="X-Large" Font-Bold="true">Registration</asp:Label>
+    </center>
+    <br />
+    <hr />
+    <br />
+
+    <center>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
     <ContentTemplate>
-    <table width="100%">        
-        <tr>
-            <td>Username:  </td>
-            <td><asp:TextBox ID="txtUsername" runat="server"></asp:TextBox></td>
-            <td><asp:Label ID="checkusername" runat="server" ForeColor="Red" Visible="false"></asp:Label></td>
+    
+    <table width="400">
+        <tr align="left">
+            <td Width="150">Username:  </td>
+            <td Width="250"><asp:TextBox ID="txtUsername" runat="server" Width="250px"></asp:TextBox></td>
         </tr>
-        <tr>
+        <tr align="left">
             <td>Password:  </td>
-            <td><asp:TextBox ID="txtPass" runat="server"></asp:TextBox></td>
+            <td align="left"><asp:TextBox ID="txtPass" runat="server" Width="250px"></asp:TextBox></td>
         </tr>
-        <tr>
+        <tr align="left">
             <td>Verify Password:  </td>
-            <td><asp:TextBox ID="txtVPass" runat="server"></asp:TextBox></td>
-            <td><asp:Label ID="checkPasswords" runat="server" Visible="false" Text="Passwords do NOT match." ForeColor="Red"></asp:Label></td>
+            <td align="left"><asp:TextBox ID="txtVPass" runat="server" Width="250px"></asp:TextBox></td>
         </tr>
-        <tr>
+        <tr align="left">
             <td>First Name:  </td>
-            <td><asp:TextBox ID="txtFname" runat="server"></asp:TextBox></td>
+            <td align="left"><asp:TextBox ID="txtFname" runat="server" Width="250px"></asp:TextBox></td>
         </tr>
-        <tr>
+        <tr align="left">
             <td>Last Name:  </td>
-            <td><asp:TextBox ID="txtLname" runat="server"></asp:TextBox></td>
+            <td align="left"><asp:TextBox ID="txtLname" runat="server" Width="250px"></asp:TextBox></td>
         </tr>
         <tr>
-            <td colspan=3><asp:Button ID="SubmitBtn" runat="server" 
-                    Text="Submit" onclick="SubmitBtn_Click" Width="675"/></td>
+            <td align="left">
+                <asp:Button ID="cancelBtn" runat="server" Text="Cancel" Width="100" 
+                    onclick="cancelBtn_Click"/>
+            </td>
+            <td align="right"><asp:Button ID="SubmitBtn" runat="server" 
+                    Text="Submit" onclick="SubmitBtn_Click" Width="144"/></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:Label ID="checkusername" runat="server" ForeColor="Red" Visible="false"></asp:Label>
+            </td>
+
         </tr>
     </table>
+    
     </ContentTemplate>
     </asp:UpdatePanel>
-
-    Working as intended!
+    </center>
+    <br />
 
 </asp:Content>
 

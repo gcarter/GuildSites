@@ -3,7 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" 
+<br />
+    <center>
+        <asp:Label ID="lblTitle" runat="server" Font-Bold="true" Font-Size="X-Large">Delete Character's</asp:Label>
+    </center>
+    <br />
+    <hr />
+
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" PageSize="15"
         AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="charName" 
         DataSourceID="SqlDataSourceDelete" Width="679px">
         <Columns>
@@ -16,6 +23,21 @@
                 SortExpression="charOwner" />
         </Columns>
     </asp:GridView>
+
+    <center>
+    <table width="650">
+        <tr>
+            <td width="20%"></td>
+            <td width="20%"></td>
+            <td width="20%"></td>
+            <td width="20%"></td>
+            <td width="20%">
+                <asp:Button ID="cancelBtn" runat="server" Text="Cancel" Width="100%" 
+                    onclick="cancelBtn_Click"/>
+            </td>
+        </tr>
+    </table>
+    </center>
     <asp:SqlDataSource ID="SqlDataSourceDelete" runat="server" 
         ConnectionString="<%$ ConnectionStrings:RosterDB %>" 
         DeleteCommand="DELETE FROM [Carter_Ga_RosterInformation] WHERE [charName] = @charName" 
@@ -36,7 +58,6 @@
             <asp:Parameter Name="charName" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
-
-    Will Delete characters from the database and working as intended.
+   
 </asp:Content>
 

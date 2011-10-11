@@ -14,8 +14,8 @@
     <div id="wrapper">
         <div id="Menu">
 		        <ul>
-                    <li><asp:LinkButton ID="LogonHprLnk" runat="server" Text="Logon" Visible="true" PostBackUrl="~/Logon.aspx"></asp:LinkButton></li>
-                    <li><asp:LinkButton ID="LogoutHprLnk" runat="server" Text="Logout" Visible="false" PostBackUrl="~/Default.aspx" OnClick="Logout_click"></asp:LinkButton></li>
+                    <li><asp:LinkButton ID="LogonHprLnk" runat="server" Text="Logon" Visible="true" OnClick="Logon_Click"></asp:LinkButton></li>
+                    <li><asp:LinkButton ID="LogoutHprLnk" runat="server" Text="Logout" Visible="false" OnClick="Logout_click"></asp:LinkButton></li>
                     <li><a href="Registration.aspx" id="Registration">Register</a></li>
 		        </ul>		
 	    </div>

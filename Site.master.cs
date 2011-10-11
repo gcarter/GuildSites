@@ -21,6 +21,11 @@ public partial class Site : System.Web.UI.MasterPage
         }
     }
 
+    protected void Logon_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Logon.aspx");
+    }
+
     protected void Logout_click(object sender, EventArgs e)
     {
         if (LogonHprLnk.Visible == false)

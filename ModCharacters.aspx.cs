@@ -9,7 +9,18 @@ public partial class ModCharacters : System.Web.UI.Page
 {        
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        for (int i = 1; i < 86; i++)
+        {
+            DropDownListLevel.Items.Add(i.ToString());
+        }
+        for (int i = 1; i < 526; i++)
+        {
+            DropDownListProfession1Skill.Items.Add(i.ToString());
+        }
+        for (int i = 1; i < 526; i++)
+        {
+            DropDownListProfession2Skill.Items.Add(i.ToString());
+        }
     }
 
     protected void updateBtn_Click(object sender, EventArgs e)
@@ -114,6 +125,10 @@ public partial class ModCharacters : System.Web.UI.Page
         conn.Close();
         conn.Dispose();
 
+        Response.Redirect("Roster.aspx");
+    }
+    protected void cancelBtn_Click(object sender, EventArgs e)
+    {
         Response.Redirect("Roster.aspx");
     }
 }

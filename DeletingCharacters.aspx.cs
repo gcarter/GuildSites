@@ -11,4 +11,8 @@ public partial class DeletingCharacters : System.Web.UI.Page
     {
 
     }
+    protected void cancelBtn_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Roster.aspx");
+    }
 }

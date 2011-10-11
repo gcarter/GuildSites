@@ -3,8 +3,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-forums page...
+<br />
+    <center>
+        <asp:Label ID="lblTitle" runat="server" Font-Bold="true" Font-Size="X-Large">Forums</asp:Label>
+    </center>
+    <br />
+    <hr />
 
-Still on the todo list.
+    Working on designing this page...
 </asp:Content>
 

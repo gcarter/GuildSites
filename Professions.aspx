@@ -3,7 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
+<br />
+    <center>
+        <asp:Label ID="lblTitle" runat="server" Font-Bold="true" Font-Size="X-Large">Professions</asp:Label>
+    </center>
+    <br />
+    <hr />
     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" 
         AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="charName" 
         DataSourceID="SqlDataSourceProfessions" Width="673px">
@@ -49,6 +54,6 @@
             <asp:Parameter Name="charName" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    Working as Intended!
+    
 </asp:Content>
 

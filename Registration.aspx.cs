@@ -57,7 +57,7 @@ public partial class Registration : System.Web.UI.Page
             conn.Close();
             conn.Dispose();
 
-            
+            Response.Redirect("Logon.aspx");
             
         }
     }
@@ -88,4 +88,8 @@ public partial class Registration : System.Web.UI.Page
         }
     }
 
+    protected void cancelBtn_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Logon.aspx");
+    }
 }
